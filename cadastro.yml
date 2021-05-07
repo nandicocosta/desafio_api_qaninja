@@ -1,0 +1,47 @@
+---
+- title: nome em branco
+  payload:
+    nome: ''
+    email: betao@yahoo.com
+    password: pwd123
+  code: 412
+  error: required name
+- title: senha em branco
+  payload:
+    nome: Roberto
+    email: betao@yahoo.com
+    password: ''
+  code: 412
+  error: required password
+- title: email em branco
+  payload:
+    nome: Roberto
+    email: ''
+    password: pwd123
+  code: 412
+  error: required email
+- title: email inválido
+  payload:
+    nome: Roberto
+    email: betao#yahoo.com
+    password: pwd123
+  code: 412
+  error: wrong email
+- title: Sem campo nome
+  payload:
+    email: betao@yahoo.com
+    password: pwd123
+  code: 412
+  error: required name
+- title: Sem campo email
+  payload:
+    nome: Roberto
+    password: pwd123
+  code: 412
+  error: required email
+- title: Sem campo senha
+  payload:
+    nome: Roberto
+    email: betao@yahoo.com
+  code: 412
+  error: required password
